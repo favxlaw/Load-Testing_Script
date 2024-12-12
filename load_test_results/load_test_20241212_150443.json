@@ -1,0 +1,15 @@
+{
+    "timestamp": "2024-12-12T14:04:43Z",
+    "url": "http://localhost:8080",
+    "configuration": {
+        "concurrent_requests": 10,
+        "duration": 5
+    },
+    "results": {
+        "total_requests": ,
+        "failed_requests": ,
+        "success_rate": ,
+        "mean_response_time": ,
+        "max_response_time": 
+    }
+}
