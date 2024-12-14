@@ -44,9 +44,10 @@ run_load_test() {
     echo "Starting load test for $url"
     echo "Concurrent requests: $concurrent"
     echo "Duration: $duration seconds"
-    
+
 # Run Apache Benchmark and capture output
     ab -n $((concurrent * duration)) -c "$concurrent" -t "$duration" \
+        -H "$custom_header" \
        -e "${log_file%.json}_distribution.csv" \
        "$url" > "${log_file%.json}_raw.txt"
 
@@ -84,6 +85,7 @@ main() {
     local url=$1
     local concurrent=$2
     local duration=$3
+    local custom_header=$4
 
     validate_inputs "$url" "$concurrent" "$duration"
     local log_file=$(setup_logging)
