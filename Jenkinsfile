@@ -4,10 +4,10 @@ pipeline {
         RESULTS_DIR = 'load_test_results'
         SCRIPT_NAME = 'main.sh' 
         GIT_REPO = 'https://github.com/favxlaw/Load-Testing_Script.git' 
-        TARGET_URL = 'https://insightglobal.com/' 
+        TARGET_URL = 'https://example.com/' 
         CONCURRENT_REQUESTS = '10'
         DURATION = '5'
-        //CUSTOM_HEADER = 'Authorization: Bearer YOUR_TOKEN_HERE' 
+        
     }
     stages {
         stage('Checkout Code') {
